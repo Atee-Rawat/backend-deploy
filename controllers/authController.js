@@ -52,17 +52,16 @@ const sendTokenResponse = async (user, codeStatus, res) => {
   const token = await user.getJwtToken();
 
   res
-  res
-  .status(codeStatus)
-  .cookie("token", token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",  // 🔥 Required for HTTPS
-    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",  // 🔥 Required for cross-origin cookie
-    maxAge: 60 * 60 * 1000,
-  })
-
+    .status(codeStatus)
+    .cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
+      maxAge: 60 * 60 * 1000,
+    })
     .json({ success: true, token, user });
 };
+
 
 exports.logout = (req, res, next) => {
   res.clearCookie('token');

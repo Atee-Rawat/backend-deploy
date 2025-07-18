@@ -3,6 +3,8 @@ const Client = require("../../models/rupin_b/Client");
 
 const addClient = async (req, res) => {
   try {
+    console.log("req.user =", req.user);
+
     const { name, manualAddress, address, phoneNumber, gpsLocation } = req.body;
 
     if (!name || !manualAddress || !address || !phoneNumber || !gpsLocation) {
@@ -37,7 +39,8 @@ const addClient = async (req, res) => {
       client: savedClient,
     });
   } catch (error) {
-    console.error('Error adding client:', error);
+    console.error('Error adding client:', error.message, error.stack);
+
     res.status(500).json({ message: 'Server error' });
   }
 };

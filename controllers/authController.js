@@ -52,13 +52,15 @@ const sendTokenResponse = async (user, codeStatus, res) => {
   const token = await user.getJwtToken();
 
   res
-    .status(codeStatus)
-    .cookie("token", token, {
-      maxAge: 60 * 60 * 1000,
-      httpOnly: true,
-      secure: false,
-      sameSite: "lax",
-    })
+  res
+  .status(codeStatus)
+  .cookie("token", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",  // 🔥 Required for HTTPS
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",  // 🔥 Required for cross-origin cookie
+    maxAge: 60 * 60 * 1000,
+  })
+
     .json({ success: true, token, user });
 };
 

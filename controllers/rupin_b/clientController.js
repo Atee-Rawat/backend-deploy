@@ -51,7 +51,8 @@ const getAllClients = async (req, res) => {
 
     res.json(clients);
   } catch (error) {
-    console.error('Error fetching clients:', error);
+    console.error('Error fetching clients:', error.message, error.stack);
+
     res.status(500).json({ message: 'Server error' });
   }
 };

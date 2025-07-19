@@ -48,7 +48,9 @@ const addClient = async (req, res) => {
 
 const getAllClients = async (req, res) => {
   try {
-    const clients = await Client.find().sort({ createdAt: -1 }); // no populate
+    const clients = await Client.find()
+      .populate('createdBy', 'firstName lastName') 
+      .sort({ createdAt: -1 });
     res.json(clients);
   } catch (error) {
     console.error('Error fetching clients:', error);

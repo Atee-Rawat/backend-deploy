@@ -1,0 +1,74 @@
+.curtain-modal-paper {
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 12px !important;
+    border: 1px solid #000 !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .curtain-modal-title {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+  
+  .curtain-modal-content {
+    color: #000 !important;
+  }
+  
+  .curtain-form-box {
+    margin-top: 8px !important;
+  }
+  
+  .curtain-label {
+    color: #000 !important;
+    margin-bottom: 4px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+  }
+  
+  .curtain-input {
+    background-color: #fff !important;
+    color: #000 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .curtain-input .MuiOutlinedInput-notchedOutline {
+    border-color: #aaa !important;
+  }
+  
+  .curtain-input input {
+    color: #000 !important;
+  }
+  
+  .curtain-input .MuiSelect-select {
+    color: #000 !important;
+  }
+  
+  .curtain-input .MuiSelect-icon {
+    color: #000 !important;
+  }
+  
+  .curtain-option {
+    color: #000 !important;
+  }
+  
+  .curtain-modal-actions {
+    padding: 16px 24px !important;
+  }
+  
+  .curtain-cancel-button {
+    border-color: #000 !important;
+    color: #000 !important;
+    font-weight: 500 !important;
+  }
+  
+  .curtain-submit-button {
+    background-color: rgb(2, 2, 2) !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+  
+  .curtain-submit-button:hover {
+    background-color: #e69500 !important;
+  }
+  

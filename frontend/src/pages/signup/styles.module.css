@@ -1,0 +1,476 @@
+/* Mobile-first approach with beautiful animations */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000 !important;
+  overflow-x: hidden; 
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.login_container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 50%, #1a1a1a 100%);
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.login_container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 95vh;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease-out;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: slideInRight 1.2s ease-out;
+}
+
+.left_container {
+  width: 100%;
+  background: linear-gradient(135deg, #ff0000 0%, #680202 100%);
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0; /* Prevent this part from shrinking */
+}
+
+.left_container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.company_title {
+  animation: slideInLeft 1s ease-out 0.2s both;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.welcome_title {
+  animation: slideInLeft 1s ease-out 0.4s both;
+  text-align: center;
+  margin-top: 20px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome_text {
+  animation: slideInLeft 1s ease-out 0.6s both;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.right_container {
+  width: 100%;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align form to the top */
+  align-items: center;
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: auto; /* This is the key change to allow scrolling */
+  flex: 1; /* Allows this container to fill available space and scroll */
+}
+
+.form_container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.login_title {
+  animation: slideInRight 1s ease-out 0.3s both;
+  text-align: center;
+  margin-bottom: 30px !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.input_item {
+  animation: fadeInUp 0.8s ease-out calc(0.5s + var(--delay, 0s)) both;
+  margin-bottom: 20px !important;
+}
+
+.input_item:nth-child(2) {
+  --delay: 0.1s;
+}
+
+.input_item:nth-child(3) {
+  --delay: 0.2s;
+}
+
+.inputfield {
+  margin-bottom: 0 !important;
+  border-radius: 12px;
+  height: 54px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  padding: 0 18px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.inputfield:focus {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 0 0 3px rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.inputfield:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inputfield::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+
+.inputfield input::placeholder {
+  color: black !important;
+  opacity: 1;
+}
+
+.button_item {
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+  margin-bottom: 20px !important;
+}
+
+.inputbutton {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  color: #000;
+  font-weight: 600;
+  height: 54px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.inputbutton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.inputbutton:hover::before {
+  left: 100%;
+}
+
+.inputbutton:hover {
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.inputbutton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.signup_button {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  margin-top: 25px;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInLeft 1s ease-out 0.8s both;
+  position: relative;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.signup_button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s;
+}
+
+.signup_button:hover::before {
+  left: 100%;
+}
+
+.signup_button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+}
+
+.error_alert {
+  animation: fadeInUp 0.5s ease-out;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Mobile screens (Portrait) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 450px;
+    width: calc(100% - 30px);
+    border-radius: 16px;
+  }
+  .left_container, .right_container {
+    padding: 30px 25px;
+  }
+  .left_container {
+    border-radius: 16px 16px 0 0;
+  }
+  .right_container {
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+/* Tablets & Desktops (Landscape / Row Layout) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-width: 900px;
+    max-height: 80vh;
+  }
+  .left_container, .right_container {
+    width: 50%;
+    min-height: 550px;
+  }
+  .left_container {
+    border-radius: 20px 0 0 20px;
+  }
+  .right_container {
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+/* Large screens and desktops */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1100px;
+    width: 85vw;
+  }
+  .left_container, .right_container {
+    min-height: 600px;
+    padding: 50px 45px;
+  }
+  .company_title {
+    font-size: 30px !important;
+  }
+  .welcome_title {
+    font-size: 22px !important;
+  }
+  .welcome_text {
+    font-size: 18px !important;
+  }
+  .login_title {
+    font-size: 30px !important;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+  .left_container, .right_container {
+    padding: 60px 50px;
+  }
+}
+
+/* Special case: Short landscape screens (like phones on their side) */
+@media (orientation: landscape) and (max-height: 500px) {
+  .login_container {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  .container {
+    margin: 20px auto;
+    max-height: none;
+  }
+  .left_container, .right_container {
+    min-height: auto;
+  }
+}
+
+/* --- ACCESSIBILITY & ENHANCEMENTS --- */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .container, .inputfield, .signup_button, .icon {
+    backdrop-filter: blur(15px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.inputfield:focus,
+.inputbutton:focus,
+.signup_button:focus,
+.icon:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .inputbutton,
+  .signup_button,
+  .icon {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

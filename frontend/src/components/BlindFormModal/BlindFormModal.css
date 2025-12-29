@@ -1,0 +1,74 @@
+.blind-modal-paper {
+    background-color: #fff !important;
+    color: #000 !important;
+    border-radius: 12px !important;
+    border: 1px solid #000 !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .blind-modal-title {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+  
+  .blind-modal-content {
+    color: #000 !important;
+  }
+  
+  .blind-form-box {
+    margin-top: 8px !important;
+  }
+  
+  .blind-label {
+    color: #000 !important;
+    margin-bottom: 4px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+  }
+  
+  .blind-input {
+    background-color: #fff !important;
+    color: #000 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .blind-input .MuiOutlinedInput-notchedOutline {
+    border-color: #aaa !important;
+  }
+  
+  .blind-input input {
+    color: #000 !important;
+  }
+  
+  .blind-input .MuiSelect-select {
+    color: #000 !important;
+  }
+  
+  .blind-input .MuiSelect-icon {
+    color: #000 !important;
+  }
+  
+  .blind-option {
+    color: #000 !important;
+  }
+  
+  .blind-modal-actions {
+    padding: 16px 24px !important;
+  }
+  
+  .blind-cancel-button {
+    border-color: #000 !important;
+    color: #000 !important;
+    font-weight: 500 !important;
+  }
+  
+  .blind-submit-button {
+    background-color: rgb(6, 6, 6) !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+  
+  .blind-submit-button:hover {
+    background-color: #e69500 !important;
+  }
+  

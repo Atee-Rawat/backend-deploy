@@ -1,0 +1,40 @@
+.cardContainer {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .linkContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .link {
+    font-size: 18px;
+    color: #ff4500;
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    border: 1px solid transparent;
+  }
+  
+  .link:hover {
+    background-color: #ff4500;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: #ff4500;
+  }
+  

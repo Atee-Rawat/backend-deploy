@@ -1,0 +1,31 @@
+.blind-details-container {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+  }
+  
+  .blind-details-title {
+    color: orange;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .blind-submit-btn {
+    margin-top: 16px !important;
+    background-color: orange !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+  
+  .blind-submit-btn:hover {
+    background-color: #e69500 !important;
+  }
+  
+  .blind-add-another-btn {
+    margin-top: 16px !important;
+    margin-left: 16px !important;
+    background-color: #1976d2 !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+  }
+  

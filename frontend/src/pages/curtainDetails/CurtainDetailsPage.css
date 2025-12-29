@@ -1,0 +1,17 @@
+.curtain-form-box {
+    background-color: #000 !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+  }
+  
+  .curtain-submit-button {
+    margin-top: 16px !important;
+    background-color: orange !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+  
+  .curtain-submit-button:hover {
+    background-color: #e69500 !important;
+  }
+  

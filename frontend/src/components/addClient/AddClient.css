@@ -1,0 +1,88 @@
+.add-client-dialog {
+  background-color: #fff !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  max-width: 520px;
+  margin: 2rem auto !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15) !important;
+  color: #000 !important;
+}
+
+.add-client-form {
+  font-family: 'Segoe UI', sans-serif !important;
+  color: #000 !important;
+}
+
+.fixed-label {
+  font-weight: 600 !important;
+  margin: 0.5rem 0 0.2rem !important;
+  color: #000 !important;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 1.2rem;
+}
+
+.customInput::placeholder {
+  color: #999;
+}
+
+
+.location-btn {
+  margin-top: 1rem !important;
+  padding: 0.6rem 1rem !important;
+  border: 1px solid #000 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.location-btn:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.coords {
+  font-size: 0.9rem !important;
+  color: #333 !important;
+  margin-top: 1rem !important;
+}
+
+.buttons {
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+  margin-top: 1.5rem !important;
+}
+
+.cancel-btn {
+  background-color: #ccc !important;
+  color: black !important;
+  padding: 0.6rem 1rem !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+}
+
+.submit-btn {
+  background-color: orange !important;
+  color: white !important;
+  padding: 0.6rem 1rem !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.submit-btn:hover {
+  background-color: #e69500 !important;
+}

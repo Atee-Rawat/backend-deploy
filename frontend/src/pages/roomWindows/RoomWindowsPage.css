@@ -1,0 +1,18 @@
+
+.completed-window {
+  background-color: #d0f0c0 !important;
+  color: #000 !important;
+}
+
+.window-card {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+.window-card * {
+  color: #000 !important;
+}
+
+.completed-window * {
+  color: #000 !important;
+}

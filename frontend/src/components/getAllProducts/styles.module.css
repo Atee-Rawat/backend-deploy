@@ -1,0 +1,33 @@
+.modalContainer {
+    width: 400px;
+    max-height: 600px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 100px auto;
+    overflow-y: auto;
+  }
+  
+  .scrollableContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .productCard {
+    padding: 15px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  

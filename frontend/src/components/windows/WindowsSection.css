@@ -1,0 +1,48 @@
+.windows-section {
+    margin-top: 2rem !important;
+    color: #000 !important;
+  }
+  
+  .section-heading {
+    color: orange !important;
+    font-weight: 600 !important;
+  }
+  
+  .window-form {
+    margin-top: 1rem !important;
+  }
+  
+  .submit-btn {
+    margin-top: 1rem !important;
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  .section-divider {
+    margin: 2rem 0 !important;
+  }
+  
+  .existing-title {
+    margin-bottom: 1rem !important;
+    font-weight: 600 !important;
+  }
+  
+  .window-card {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid #eee !important;
+    border-radius: 8px !important;
+    background-color: #fff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  .window-room {
+    font-weight: 600 !important;
+  }
+  
+  .card-buttons {
+    margin-top: 0.5rem !important;
+    display: flex;
+    gap: 0.5rem;
+  }
+  

@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+.window-details-container {
+  padding: 16px;
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.window-details-container h2 {
+  color: black;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.window-details-container p,
+.window-details-container .MuiTypography-root {
+  font-size: 16px;
+  margin: 12px 0;
+  color: black !important;
+}
+
+.window-details-container .MuiTextField-root {
+  margin-bottom: 20px;
+}
+
+.window-details-container button {
+  background-color: orange;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.window-details-container button:hover {
+  background-color: #e69500;
+}
+
+.window-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.window-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-full-row {
+  grid-column: 1 / -1;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.button-row button {
+  flex: 1;
+  height: 46px;
+}
+
+.window-button-row {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.window-button-row button {
+  flex: 1;
+  height: 46px;
+  border: 1px solid orange;
+  background-color: white;
+  color: orange;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.window-button-row button:hover {
+  background-color: orange;
+  color: white;
+}

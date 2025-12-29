@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+
+    <!-- Google Maps API Init Callback (can be empty) -->
+    <script>
+      window.initMap = () => {};
+    </script>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChg-WCyhY7wBuGWDCYUCX7ktuROs3yiFg&libraries=places&v=beta&callback=initMap"
+      async
+      defer
+    ></script>
+    
+    <script
+      src="https://unpkg.com/@googlemaps/extended-component-library@latest/dist/index.umd.js"
+      async
+      defer
+    ></script>
+    <!-- Mobsted {literal} -->
+    <script>
+      window.pwaless = {
+        accountId: "d8a9a945",
+        server: "mobsted.com",
+        projectId: 17
+      };
+    </script>
+    <script src="https://cdn.mobsted.com/pwaless.js"></script>
+    
+<!-- /Mobsted {/literal} -->
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

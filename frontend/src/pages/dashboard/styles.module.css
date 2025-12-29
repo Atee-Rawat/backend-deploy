@@ -1,0 +1,7 @@
+.home_cont {
+    display: flex;
+    flex-direction: row;
+    background-color: #121212;
+    color: white;
+  }
+  
